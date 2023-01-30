@@ -1,0 +1,9 @@
+topics:
+- /rs01/depth/camera_info
+- /rs01/depth/image_rect_raw
+- /rs01/color/camera_info
+- /rs01/color/image_raw/compressed
+- /rs01/aligned_depth_to_color/camera_info
+- /rs01/aligned_depth_to_color/image_raw
+- /opw/rs01/skeleton_group
+- /opw_3d/rs01/skeleton_group

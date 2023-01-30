@@ -1,7 +1,26 @@
 # remote_rosbag_record
 ROS nodes that start/stop rosbag-record by a remote trigger
 
-## Usage
+## OpenPTrack usage
+1. Set `ROS_OPT_NAME` environment varable on each PC in the camera network. In the `bashrc` add:
+```bash
+export ROS_OPT_NAME=opt01
+```
+
+2. On each PC, launch the recorder node. Using the launch file it is possible to change the rosbag filename. For example to save a `path/to/rosbag.bag` file, use:
+```bash
+roslaunch remote_rosbag_record opt_record.launch output_filename:="path/to/rosbag"
+```
+
+3. Use the `trigger` node to start and stop acquisition on all PCs:
+```bash
+rosrun remote_rosbag_record trigger _regex:="/.*/start"
+rosrun remote_rosbag_record trigger _regex:="/.*/stop"
+```
+
+---
+
+## General usage
 1. Launch recorder nodes with your favourite nodes. Use respawn options to record multiple times.
 ```
 <launch>

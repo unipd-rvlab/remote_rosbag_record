@@ -1,0 +1,13 @@
+topics:
+- /tf
+- /tf_static
+- /tracker/history_smoothed
+- /tracker/skeleton_history
+- /tracker/skeleton_tracks
+- /tracker/standard_skeleton_markers
+- /tracker/standard_skeleton_tracks
+- /tracker/tracks_smoothed
+- /detector/skeleton_history
+- /detector/skeleton_markers_array
+- /detector/skeletons
+

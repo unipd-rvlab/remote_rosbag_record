@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<launch>
+
+  <arg name="output_filename"  default="/home/$USER/rosbags/test" />
+
+  <group ns="$(env ROS_OPT_NAME)">
+
+    <node pkg="remote_rosbag_record" type="record" name="opt_recorder" respawn="true">
+      <rosparam file="$(find remote_rosbag_record)/config/topics_$(env ROS_OPT_NAME).yaml"/>
+      <param name="prefix" value="$(arg output_filename)"/>
+      <param name="apped_date" value="false"/>
+      <param name="verbose" value="true"/>      
+    </node>
+  </group>
+  
+</launch>
